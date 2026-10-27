@@ -9,6 +9,14 @@
 
 > Native macOS menu bar app for Counter-Strike 2 schedules, live scores, and recent results. The interface is currently localized in Simplified Chinese.
 
+## 界面预览
+
+<p align="center">
+  <img src="docs/images/app-preview.jpg" width="390" alt="CS Match Desk 菜单栏面板，展示按赛事分组的实时比分与当日赛程">
+</p>
+
+<p align="center"><sub>从菜单栏快速查看焦点赛事、实时比分、系列赛进度，以及昨天、今天和明天的赛程。</sub></p>
+
 ## 功能
 
 - 从 [HLTV Matches](https://www.hltv.org/matches) 已渲染的页面读取比赛信息
