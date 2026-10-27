@@ -1,0 +1,10 @@
+.build/
+build/
+.cache/
+.DS_Store
+.swiftpm/
+DerivedData/
+*.dSYM/
+*.xcuserstate
+xcuserdata/
+._*
