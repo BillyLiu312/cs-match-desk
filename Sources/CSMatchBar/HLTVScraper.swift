@@ -144,6 +144,7 @@ final class HLTVScraper: NSObject, WKNavigationDelegate {
     }
 
     func exportValveTopTeamLogos() async throws -> Int {
+        let limit = 100
         guard let url = URL(string: "https://www.hltv.org/valve-ranking/teams") else {
             throw ScrapeError.pageUnavailable
         }
@@ -156,10 +157,26 @@ final class HLTVScraper: NSObject, WKNavigationDelegate {
                 "document.querySelectorAll('.ranking-header').length"
             )
             let count = (rawCount as? NSNumber)?.intValue ?? (rawCount as? Int) ?? 0
-            if count >= 50 {
-                _ = try? await webView.evaluateJavaScript("window.scrollTo(0, 3200); true")
-                try await Task.sleep(for: .seconds(3))
-                return try await cacheVisibleTeamLogos(limit: 50, containerSelector: ".ranking-header")
+            if count >= limit {
+                // Scroll through the whole selection so lower-ranked logos load too.
+                for index in stride(from: 0, to: limit, by: 10) {
+                    _ = try await webView.evaluateJavaScript(
+                        "document.querySelectorAll('.ranking-header')[\(index)].scrollIntoView(); true"
+                    )
+                    try await Task.sleep(for: .milliseconds(300))
+                }
+                for _ in 0..<15 {
+                    try await Task.sleep(for: .seconds(1))
+                    let ready = try await webView.evaluateJavaScript("""
+                        Array.from(document.querySelectorAll('.ranking-header')).slice(0, \(limit))
+                          .every(container => Array.from(container.querySelectorAll('img'))
+                            .some(image => image.complete && image.naturalWidth > 0))
+                        """) as? Bool
+                    if ready == true {
+                        return try await cacheVisibleTeamLogos(limit: limit, containerSelector: ".ranking-header")
+                    }
+                }
+                throw ScrapeError.timedOut
             }
         }
         throw ScrapeError.timedOut
@@ -176,7 +193,7 @@ final class HLTVScraper: NSObject, WKNavigationDelegate {
           const limit = \#(limit);
           const seen = new Set();
           const items = [];
-          for (const container of document.querySelectorAll(selector)) {
+          for (const container of Array.from(document.querySelectorAll(selector)).slice(0, limit)) {
             const images = [...container.querySelectorAll('img')];
             const image = images.find(img => img.classList.contains('night-only') && img.complete && img.naturalWidth > 0)
               || images.find(img => img.complete && img.naturalWidth > 0)

@@ -13,6 +13,8 @@ Files in these directories are derived from team-logo resources rendered by HLTV
 - `Resources/OriginalTeamLogos/`
 - `Resources/DarkTeamLogos/`
 
+The current snapshot covers the top 100 teams in the [HLTV Valve global ranking for October 28, 2026](https://www.hltv.org/valve-ranking/teams/2026/october/28). Per-team ranks, source URLs, filenames, and placeholder status are recorded in `docs/team-logos.json`. Original PNG/SVG resources retain their source artwork; dark variants are generated with `scripts/generate-dark-team-logos.swift` using its existing dark-neutral and color thresholds. Color, ex-Zero Tenacity, and ex-RUSTEC use the letter placeholders provided by HLTV.
+
 Team names, logos, and related trademarks belong to their respective owners. The dark variants are accessibility-oriented transformations for display on a dark background. These assets are excluded from the MIT License.
 
 ## Application Artwork

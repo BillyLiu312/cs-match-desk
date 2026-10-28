@@ -1,0 +1,706 @@
+{
+  "rankingDate": "2026-10-28",
+  "rankingURL": "https://www.hltv.org/valve-ranking/teams/2026/october/28",
+  "teams": [
+    {
+      "name": "Vitality",
+      "rank": 1,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/ogcHrcCdzRvxbYvAz04KAN.png?ixlib=java-2.1.0&w=100&s=c7577435f1641f0802c586934e6a4b6a",
+      "file": "vitality.png",
+      "placeholder": false
+    },
+    {
+      "name": "MOUZ",
+      "rank": 2,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/IejtXpquZnE8KqYPB1LNKw.svg?ixlib=java-2.1.0&s=7fd33b8def053fbfd8fdbb58e3bdcd3c",
+      "file": "mouz.svg",
+      "placeholder": false
+    },
+    {
+      "name": "Spirit",
+      "rank": 3,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/syrtYYKR7sBRw3ZHy1YFX7.png?ixlib=java-2.1.0&w=100&s=8d98ab33e1c8139633132cb9eccda0af",
+      "file": "spirit.png",
+      "placeholder": false
+    },
+    {
+      "name": "Aurora",
+      "rank": 4,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/yJzPNOeXlyiniNxanYJCrv.png?ixlib=java-2.1.0&w=100&s=f23524510b9d49ea59166e6e2efee1ac",
+      "file": "aurora.png",
+      "placeholder": false
+    },
+    {
+      "name": "FURIA",
+      "rank": 5,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/mvNQc4csFGtxXk5guAh8m1.svg?ixlib=java-2.1.0&s=11e5056829ad5d6c06c5961bbe76d20c",
+      "file": "furia.svg",
+      "placeholder": false
+    },
+    {
+      "name": "BETBOOM",
+      "rank": 6,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/G4ZrdB0-q41USPd_z27IQA.png?ixlib=java-2.1.0&w=100&s=cb2c8c3b65e034368ff60f1c6a8d04ef",
+      "file": "betboom.png",
+      "placeholder": false
+    },
+    {
+      "name": "Falcons",
+      "rank": 7,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/4eJSkDQINNM6Tbs4WvLzkN.png?ixlib=java-2.1.0&w=100&s=01e7f9dd30b34e66f429f43627c2e005",
+      "file": "falcons.png",
+      "placeholder": false
+    },
+    {
+      "name": "FUT",
+      "rank": 8,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/Os71GAOy8KDuQFc0M8HE6O.png?ixlib=java-2.1.0&w=100&s=828ea5ad48c3f170daf3ab9d983c8048",
+      "file": "fut.png",
+      "placeholder": false
+    },
+    {
+      "name": "Legacy",
+      "rank": 9,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/RWbHH6RA8uGwJurGeLFvSr.png?ixlib=java-2.1.0&w=100&s=10ff29ff632e0bd82922f4fcd83f930f",
+      "file": "legacy.png",
+      "placeholder": false
+    },
+    {
+      "name": "G2",
+      "rank": 10,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/zFLwAELOD15BjJSDMMNBWQ.png?ixlib=java-2.1.0&w=100&s=88aeba1564bc27de69fb2302e47e1a7c",
+      "file": "g2.png",
+      "placeholder": false
+    },
+    {
+      "name": "The MongolZ",
+      "rank": 11,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/bRk2sh_tSTO6fq1GLhgcal.png?ixlib=java-2.1.0&w=100&s=1bd99148a19e1e706b543500206901d4",
+      "file": "the_mongolz.png",
+      "placeholder": false
+    },
+    {
+      "name": "MIBR",
+      "rank": 12,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/sVnH-oAf1J5TnMwoY4cxUC.png?ixlib=java-2.1.0&w=100&s=8ace09ef5b2fac0eb7cd65213ad3cc85",
+      "file": "mibr.png",
+      "placeholder": false
+    },
+    {
+      "name": "Astralis",
+      "rank": 13,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/9bgXHp-oh1oaXr7F0mTGmd.svg?ixlib=java-2.1.0&s=f567161ab183001be33948b98c4b2067",
+      "file": "astralis.svg",
+      "placeholder": false
+    },
+    {
+      "name": "PARIVISION",
+      "rank": 14,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/MFcDe-M8wfGOUU6x4sRELR.png?ixlib=java-2.1.0&w=100&s=dccd3a3351064dd1ab9afebbed8443a9",
+      "file": "parivision.png",
+      "placeholder": false
+    },
+    {
+      "name": "Ninjas in Pyjamas",
+      "rank": 15,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/-ttGATBV_P_HcZazxNNtIb.png?ixlib=java-2.1.0&w=100&s=8553ef1ff134f4171868cbfaf234836d",
+      "file": "ninjas_in_pyjamas.png",
+      "placeholder": false
+    },
+    {
+      "name": "Natus Vincere",
+      "rank": 16,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/9iMirAi7ArBLNU8p3kqUTZ.svg?ixlib=java-2.1.0&s=4dd8635be16122656093ae9884675d0c",
+      "file": "natus_vincere.svg",
+      "placeholder": false
+    },
+    {
+      "name": "FaZe",
+      "rank": 17,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/OKLwq88GXjl5GQ48Y5SrvW.png?ixlib=java-2.1.0&w=100&s=1ea8eedae6fedc8272e3f1aa91d1efed",
+      "file": "faze.png",
+      "placeholder": false
+    },
+    {
+      "name": "HEROIC",
+      "rank": 18,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/4S22uk_gnZTiQiI-hhH4yp.png?ixlib=java-2.1.0&w=100&s=a5d9fdc008d14ed3b126835304871d49",
+      "file": "heroic.png",
+      "placeholder": false
+    },
+    {
+      "name": "Liquid",
+      "rank": 19,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/JMeLLbWKCIEJrmfPaqOz4O.svg?ixlib=java-2.1.0&s=c02caf90234d3a3ebac074c84ba1ea62",
+      "file": "liquid.svg",
+      "placeholder": false
+    },
+    {
+      "name": "Nemiga",
+      "rank": 20,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/6ZPCm5r3XyGByXkFGiRnLh.png?ixlib=java-2.1.0&w=100&s=ec51c91e709bd6a892d27978e83115d5",
+      "file": "nemiga.png",
+      "placeholder": false
+    },
+    {
+      "name": "9z",
+      "rank": 21,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/ih4DgTvRI4y8l9DKevo2G8.png?ixlib=java-2.1.0&w=100&s=0e6df6325cbd6c4e02150870cf473e40",
+      "file": "9z.png",
+      "placeholder": false
+    },
+    {
+      "name": "1win",
+      "rank": 22,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/zbmzI2IMFNwHUvTO4EHaTZ.png?ixlib=java-2.1.0&w=100&s=4386b1cf14aad08da4fa872894c4c44f",
+      "file": "1win.png",
+      "placeholder": false
+    },
+    {
+      "name": "M80",
+      "rank": 23,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/YsaWwP_VrkbHzuhszuANEK.png?ixlib=java-2.1.0&w=100&s=50048fc17b31841da92a6ec6b6dc37c6",
+      "file": "m80.png",
+      "placeholder": false
+    },
+    {
+      "name": "100 Thieves",
+      "rank": 24,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/QdpX-_6C2wHMgv98VAE6il.png?ixlib=java-2.1.0&w=100&s=de550a602c2c8b0e64519746c00d0541",
+      "file": "100_thieves.png",
+      "placeholder": false
+    },
+    {
+      "name": "BIG",
+      "rank": 25,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/OgMRQA35hopXA8kDwMFHIY.svg?ixlib=java-2.1.0&s=ec7bc44165c7acf4224a22a1338ab7d7",
+      "file": "big.svg",
+      "placeholder": false
+    },
+    {
+      "name": "Inner Circle",
+      "rank": 26,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/nzJhoae6HI3i1UORM-DBFD.png?ixlib=java-2.1.0&w=100&s=94c66676b38be4eff71807007b0c4bfe",
+      "file": "inner_circle.png",
+      "placeholder": false
+    },
+    {
+      "name": "fnatic",
+      "rank": 27,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/dLtWEdSV58lIX1amAFggy0.svg?ixlib=java-2.1.0&s=f24d0a7b3ef24ed57184a51d35202b4e",
+      "file": "fnatic.svg",
+      "placeholder": false
+    },
+    {
+      "name": "JiJieHao",
+      "rank": 28,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/OmcJcjX0obWnKkP7ChpuFA.png?ixlib=java-2.1.0&w=100&s=2ecaeefb87ed63bcb5a0133eeac76abf",
+      "file": "jijiehao.png",
+      "placeholder": false
+    },
+    {
+      "name": "B8",
+      "rank": 29,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/O6nRWTCjUzBAR4pcOcrpSG.png?ixlib=java-2.1.0&w=100&s=e5dd0702ea2c42631fef0b0389f1abf4",
+      "file": "b8.png",
+      "placeholder": false
+    },
+    {
+      "name": "Virtus.pro",
+      "rank": 30,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/yZ6Bpuui1rW3jocXQ68XgZ.svg?ixlib=java-2.1.0&s=f39be1d3e7baf30a4e7f0b1216720875",
+      "file": "virtus_pro.svg",
+      "placeholder": false
+    },
+    {
+      "name": "HOTU",
+      "rank": 31,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/UH5TD1Lyutr_JwKu2ldl-A.png?ixlib=java-2.1.0&w=100&s=7df76731b68485049a9c7f7b710df7f3",
+      "file": "hotu.png",
+      "placeholder": false
+    },
+    {
+      "name": "Eternal Fire",
+      "rank": 32,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/Tafdq71X3B_-73b73bAixr.png?ixlib=java-2.1.0&w=100&s=acf07fab5478f7dda7201085fc55e467",
+      "file": "eternal_fire.png",
+      "placeholder": false
+    },
+    {
+      "name": "K27",
+      "rank": 33,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/7LmOZHYhlq-fIAm23aM2q1.png?ixlib=java-2.1.0&w=100&s=82b90af71ac4d98799a465aeb5328e79",
+      "file": "k27.png",
+      "placeholder": false
+    },
+    {
+      "name": "magic",
+      "rank": 34,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/KYi27Dm-DVyEUj0WIG5Bdx.png?ixlib=java-2.1.0&w=100&s=f7cf1cad7d6fa08278c0ac29e29ae085",
+      "file": "magic.png",
+      "placeholder": false
+    },
+    {
+      "name": "SINNERS",
+      "rank": 35,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/9l_WdQSU9JsNHzpK-pwOG2.svg?ixlib=java-2.1.0&s=af432c3ef61c0c843331cc0dc2fed1ed",
+      "file": "sinners.svg",
+      "placeholder": false
+    },
+    {
+      "name": "Luminosity",
+      "rank": 36,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/HRSwDY9X42P2TiJqy1oeEJ.png?ixlib=java-2.1.0&w=100&s=909690cad11adc86b3e1df3f818e493d",
+      "file": "luminosity.png",
+      "placeholder": false
+    },
+    {
+      "name": "BC.Game",
+      "rank": 37,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/Sh3oQBtd6xemdynQ-H_NJa.png?ixlib=java-2.1.0&w=100&s=9cd95f30d9a1b0c8e05c1b788d812d3c",
+      "file": "bc_game.png",
+      "placeholder": false
+    },
+    {
+      "name": "DENDELE",
+      "rank": 38,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/xKB2zOMgkFKoD-MLU484IV.png?ixlib=java-2.1.0&w=100&s=fb3f313816624214a6a9295c9a4e46f5",
+      "file": "dendele.png",
+      "placeholder": false
+    },
+    {
+      "name": "Imperial",
+      "rank": 39,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/bBDk6-rND06sAzn67b5RdP.png?ixlib=java-2.1.0&w=100&s=c9a241092d2878cd5742a4322b65a691",
+      "file": "imperial.png",
+      "placeholder": false
+    },
+    {
+      "name": "Nemesis",
+      "rank": 40,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/elLVHPbX3OkW4t8CHjKnoY.png?ixlib=java-2.1.0&w=100&s=4b4e4bd630c54d54d615ffb0c69275ee",
+      "file": "nemesis.png",
+      "placeholder": false
+    },
+    {
+      "name": "BBL",
+      "rank": 41,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/tzt1wJ9t26NGc8HNo-hIJy.png?ixlib=java-2.1.0&w=100&s=bba9a546cca4d204cec30aa4a7fa74ce",
+      "file": "bbl.png",
+      "placeholder": false
+    },
+    {
+      "name": "Sangal",
+      "rank": 42,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/zPv_FeMF8CANC10Jz32P9l.png?ixlib=java-2.1.0&w=100&s=6838116e048192c48c32b0321e597e3a",
+      "file": "sangal.png",
+      "placeholder": false
+    },
+    {
+      "name": "Envy",
+      "rank": 43,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/caSZsIlWR3MQuSWMCJDj8V.svg?ixlib=java-2.1.0&s=52dab8f2955522087be3c5d43013bea8",
+      "file": "envy.svg",
+      "placeholder": false
+    },
+    {
+      "name": "Wildcard",
+      "rank": 44,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/-46lJ-DcmPL_j_5R2WvLiS.png?ixlib=java-2.1.0&w=100&s=a0ec0866e698643ee7359eaee646b8fd",
+      "file": "wildcard.png",
+      "placeholder": false
+    },
+    {
+      "name": "GamerLegion",
+      "rank": 45,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/vN7O46QoQ346WIRZ8D3spC.png?ixlib=java-2.1.0&w=100&s=914cff157a698a30714da80f8cfa5d33",
+      "file": "gamerlegion.png",
+      "placeholder": false
+    },
+    {
+      "name": "Alliance",
+      "rank": 46,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/xsWK0BtR26rN776qdnWFC1.png?ixlib=java-2.1.0&w=100&s=8a8620433b87679e532367e2c90a3248",
+      "file": "alliance.png",
+      "placeholder": false
+    },
+    {
+      "name": "paiN",
+      "rank": 47,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/iUUCFwCOFmOrwhB8q8smMg.svg?ixlib=java-2.1.0&s=1446e1cf3d02deb8190fe6efd14e4ce4",
+      "file": "pain.svg",
+      "placeholder": false
+    },
+    {
+      "name": "FOKUS",
+      "rank": 48,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/VFmCLfAOw0WUmb_2fDDX3o.png?ixlib=java-2.1.0&w=100&s=3b75ec5687a9e4a656134ddd1011a80c",
+      "file": "fokus.png",
+      "placeholder": false
+    },
+    {
+      "name": "NRG",
+      "rank": 49,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/SJZaPBCyZssru-pUDS3aZe.png?ixlib=java-2.1.0&w=100&s=f3e3a6ac422d8be2d7b8ad03786a35ae",
+      "file": "nrg.png",
+      "placeholder": false
+    },
+    {
+      "name": "TYLOO",
+      "rank": 50,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/hMPKtNMDxp07n3lrBEHCuq.svg?ixlib=java-2.1.0&s=6d22fc4af07d0cd9d31fcd7f3023af9a",
+      "file": "tyloo.svg",
+      "placeholder": false
+    },
+    {
+      "name": "Chinggis Warriors",
+      "rank": 51,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/esvV905BqvAKUUPLq8e89T.png?ixlib=java-2.1.0&w=100&s=c47dbf230b6791457cb1f2a84b24467f",
+      "file": "chinggis_warriors.png",
+      "placeholder": false
+    },
+    {
+      "name": "Lynn Vision",
+      "rank": 52,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/DPcHT21uWwK1hDD_3txlL9.png?ixlib=java-2.1.0&w=100&s=1529ee0026d4e588254fbcd85037eeff",
+      "file": "lynn_vision.png",
+      "placeholder": false
+    },
+    {
+      "name": "FlyQuest",
+      "rank": 53,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/fmqTgF6Ziw0uied7MO3_ri.png?ixlib=java-2.1.0&w=100&s=171deb954176f25d79fcec7dd528f4d1",
+      "file": "flyquest.png",
+      "placeholder": false
+    },
+    {
+      "name": "Nuclear TigeRES",
+      "rank": 54,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/GcO3SLh1j8cgiNGoEXNUVS.png?ixlib=java-2.1.0&w=100&s=689d9fb00114a0cfb9f656ec1dae0492",
+      "file": "nuclear_tigeres.png",
+      "placeholder": false
+    },
+    {
+      "name": "Betclic",
+      "rank": 55,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/iX5wi-ZLkdHTARnXcMEvZF.png?ixlib=java-2.1.0&w=100&s=c5b65db7ff10680486e1e8890015b62f",
+      "file": "betclic.png",
+      "placeholder": false
+    },
+    {
+      "name": "EYEBALLERS",
+      "rank": 56,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/3-Mfc-yWBTls8MPSEFhma5.png?invert=true&ixlib=java-2.1.0&sat=-100&w=100&s=161f662083d7e31a565c35bbc2d9d4c6",
+      "file": "eyeballers.png",
+      "placeholder": false
+    },
+    {
+      "name": "SAW",
+      "rank": 57,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/9vOlYp2U_z0vXPb9aLK-4r.png?ixlib=java-2.1.0&w=100&s=0df3515052a2a4353022cc9d9e9b8d87",
+      "file": "saw.png",
+      "placeholder": false
+    },
+    {
+      "name": "Iberian Soul",
+      "rank": 58,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/HD2YseMU5u5fOtLMzN4o2i.png?ixlib=java-2.1.0&w=100&s=03a31f05e7ca25e4f4c9c8dbe13bbe8b",
+      "file": "iberian_soul.png",
+      "placeholder": false
+    },
+    {
+      "name": "BESTIA",
+      "rank": 59,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/Z_R5K__qrvHmPjF66iCay-.png?ixlib=java-2.1.0&w=100&s=95ccee1ade2717fec70cdda1c1815fd5",
+      "file": "bestia.png",
+      "placeholder": false
+    },
+    {
+      "name": "UNiTY",
+      "rank": 60,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/coucDlsynd0Ujutb5o2SC-.png?ixlib=java-2.1.0&w=100&s=c04a17f394f33cc7bdee8d4889492157",
+      "file": "unity.png",
+      "placeholder": false
+    },
+    {
+      "name": "Fluxo",
+      "rank": 61,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/zGveLNj821BCJGMu93qnj-.png?ixlib=java-2.1.0&w=100&s=9831f542e589efa665f7805750677d80",
+      "file": "fluxo.png",
+      "placeholder": false
+    },
+    {
+      "name": "PRIVATE",
+      "rank": 62,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/r31Wu6qCyS8909Zj1ftP36.png?ixlib=java-2.1.0&w=100&s=f803e1ac274d56602d72de0aea63f70e",
+      "file": "private.png",
+      "placeholder": false
+    },
+    {
+      "name": "Phantom",
+      "rank": 63,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/DzhUnKXRRy9yV2MILp29YH.png?ixlib=java-2.1.0&w=100&s=3fb2aad69e48b6fe5ab3bb37ad37c471",
+      "file": "phantom.png",
+      "placeholder": false
+    },
+    {
+      "name": "5star",
+      "rank": 64,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/DxfB_DH6Hhb1l1okhNQxxu.png?ixlib=java-2.1.0&w=100&s=b2ee1d2374cce6f4d2a3301888a76f6a",
+      "file": "5star.png",
+      "placeholder": false
+    },
+    {
+      "name": "PURE",
+      "rank": 65,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/Djq1hZ4t4zziK0Wij3PvHM.png?ixlib=java-2.1.0&w=100&s=a69f5d9938ffa0bc63b0a0253cb3f088",
+      "file": "pure.png",
+      "placeholder": false
+    },
+    {
+      "name": "Nexus",
+      "rank": 66,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/TsvwZ9z4tVRO9Ry1jYxs_n.png?ixlib=java-2.1.0&w=100&s=b6839c00228a5e68e25ae63cdbe1f90a",
+      "file": "nexus.png",
+      "placeholder": false
+    },
+    {
+      "name": "WBT",
+      "rank": 67,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/_coqH_U02fBToVR-m_CKsU.png?ixlib=java-2.1.0&w=100&s=290cf53650b9b44c756d48be318deea1",
+      "file": "wbt.png",
+      "placeholder": false
+    },
+    {
+      "name": "SportsBetExpert",
+      "rank": 68,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/gk75xUsUSOXNvyT0A4UBS2.png?ixlib=java-2.1.0&w=100&s=4e4345f6c2e7732f700a7930bc6ed055",
+      "file": "sportsbetexpert.png",
+      "placeholder": false
+    },
+    {
+      "name": "BRUTE",
+      "rank": 69,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/Bh8oZnAYofBgma_vPu55I7.svg?ixlib=java-2.1.0&s=98154a0be5a53ccadf51c17bdcd57536",
+      "file": "brute.svg",
+      "placeholder": false
+    },
+    {
+      "name": "Metizport",
+      "rank": 70,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/L6vT42LZaQh88EXiZ5FpHK.png?ixlib=java-2.1.0&w=100&s=62a41190638a8af55f8f2f0e8decc006",
+      "file": "metizport.png",
+      "placeholder": false
+    },
+    {
+      "name": "NEXVOID",
+      "rank": 71,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/dtGHo6Ay84XO2R3eQTiwgA.png?ixlib=java-2.1.0&w=100&s=77783f28b89a8a6886703aeccfdf6f25",
+      "file": "nexvoid.png",
+      "placeholder": false
+    },
+    {
+      "name": "Black Phoenix",
+      "rank": 72,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/FeWUb1K1oVk3xsrzBxaEz0.png?ixlib=java-2.1.0&w=100&s=ab83113fd354ad85ea4c45132487c281",
+      "file": "black_phoenix.png",
+      "placeholder": false
+    },
+    {
+      "name": "INFINITE",
+      "rank": 73,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/Bq4oCmwPwqkpV5XvHqmVhI.png?ixlib=java-2.1.0&w=100&s=48b97c34aebfca518a30b4bdaf1edcad",
+      "file": "infinite.png",
+      "placeholder": false
+    },
+    {
+      "name": "QUAZAR",
+      "rank": 74,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/YiIFGuv43P9_fALVOSLJHh.png?ixlib=java-2.1.0&w=100&s=7bc01b4a7e27269f78deaa223e5a1ab7",
+      "file": "quazar.png",
+      "placeholder": false
+    },
+    {
+      "name": "Acend",
+      "rank": 75,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/TslndPhDvsn1bLMdm1j2i6.png?ixlib=java-2.1.0&w=100&s=59913cb4781074edfb7628a074afea79",
+      "file": "acend.png",
+      "placeholder": false
+    },
+    {
+      "name": "NAVI Junior",
+      "rank": 76,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/v6HtbTihf7xoHF1YlAkJ87.svg?ixlib=java-2.1.0&s=42241b88f4ecffaba7cf57c937236809",
+      "file": "navi_junior.svg",
+      "placeholder": false
+    },
+    {
+      "name": "Color",
+      "rank": 77,
+      "sourceURL": "https://www.hltv.org/dynamic-svg/teamplaceholder?letter=C",
+      "file": "color.svg",
+      "placeholder": true
+    },
+    {
+      "name": "ex-Zero Tenacity",
+      "rank": 78,
+      "sourceURL": "https://www.hltv.org/dynamic-svg/teamplaceholder?letter=e",
+      "file": "ex_zero_tenacity.svg",
+      "placeholder": true
+    },
+    {
+      "name": "Voca",
+      "rank": 79,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/1Z_CvAJE9Qb5h9WyIi1PoP.png?ixlib=java-2.1.0&w=100&s=7153ba147e5c9e49225f274945ff4c90",
+      "file": "voca.png",
+      "placeholder": false
+    },
+    {
+      "name": "BASEMENT BOYS",
+      "rank": 80,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/IAgnK7oXGijw4nomIKEVIw.png?ixlib=java-2.1.0&w=100&s=f1f975f193b4f3d497690cfdcc895fc2",
+      "file": "basement_boys.png",
+      "placeholder": false
+    },
+    {
+      "name": "FORZE Reload",
+      "rank": 81,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/YJnWBDwmRDJ9o2uOUrhNeQ.png?ixlib=java-2.1.0&w=100&s=69220873b2f3556fd7c872f0096ed4c2",
+      "file": "forze_reload.png",
+      "placeholder": false
+    },
+    {
+      "name": "Lazer Cats",
+      "rank": 82,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/WldQs3KiJJFmGzdeOdibuw.png?ixlib=java-2.1.0&w=100&s=fa991d754d181bdaef3250947605e924",
+      "file": "lazer_cats.png",
+      "placeholder": false
+    },
+    {
+      "name": "Galorys",
+      "rank": 83,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/GljsUhNlV1YdE2Z1ge-HzK.png?ixlib=java-2.1.0&w=100&s=a4cb4a294d684d53ae03bbb627f7a5e6",
+      "file": "galorys.png",
+      "placeholder": false
+    },
+    {
+      "name": "RBLS",
+      "rank": 84,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/vfupmnriFumqC8u48wFIdm.png?ixlib=java-2.1.0&w=100&s=2ff8b2264de9a198450fe4ba845dd1e9",
+      "file": "rbls.png",
+      "placeholder": false
+    },
+    {
+      "name": "aimclub",
+      "rank": 85,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/PhNn8XgEQgZbp6ti-_IfFT.png?ixlib=java-2.1.0&w=100&s=79efe594f2039f3558077a8e7519b1a2",
+      "file": "aimclub.png",
+      "placeholder": false
+    },
+    {
+      "name": "NT",
+      "rank": 86,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/jYTlrh5Dt5JG1YcDk4JmLq.png?ixlib=java-2.1.0&w=100&s=742fdfd0fe5f40150d8f4efde729bb21",
+      "file": "nt.png",
+      "placeholder": false
+    },
+    {
+      "name": "INOX Division",
+      "rank": 87,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/5jcprHN8P8ylGZJxkC3ZHj.png?ixlib=java-2.1.0&w=100&s=381cbf4753c9aee3aec655bbe051c1ee",
+      "file": "inox_division.png",
+      "placeholder": false
+    },
+    {
+      "name": "UPGRADE",
+      "rank": 88,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/-vGUPCc5eof0EN06ySnwWM.png?ixlib=java-2.1.0&w=100&s=92e49e58851cfb16020ec120300df306",
+      "file": "upgrade.png",
+      "placeholder": false
+    },
+    {
+      "name": "ShindeN",
+      "rank": 89,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/5tfhYrPKeLDzFW8X-vFExJ.png?ixlib=java-2.1.0&w=100&s=83c3f765855b47e552cd1b44423291d7",
+      "file": "shinden.png",
+      "placeholder": false
+    },
+    {
+      "name": "BARCA",
+      "rank": 90,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/yKmeAPcrC8K0KTmxyD2Hu1.png?ixlib=java-2.1.0&w=100&s=e9a7a443f7c7abbcfc89bf7e52e263ef",
+      "file": "barca.png",
+      "placeholder": false
+    },
+    {
+      "name": "Without a Roof",
+      "rank": 91,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/hdZG8cLvx9zT18jobxu9Ga.svg?ixlib=java-2.1.0&s=224c98691ff7f19deb17625ede478be1",
+      "file": "without_a_roof.svg",
+      "placeholder": false
+    },
+    {
+      "name": "CYBERSHOKE",
+      "rank": 92,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/gzn14uIQ6ENslja9hMqnkj.png?ixlib=java-2.1.0&w=100&s=b1764e1b4763b1f62c7af31ffb729082",
+      "file": "cybershoke.png",
+      "placeholder": false
+    },
+    {
+      "name": "GenOne",
+      "rank": 93,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/DlMJrDmPA7qofO3HhP7Tbe.png?ixlib=java-2.1.0&w=100&s=76fce5eaae55c00a8a5884eaa4999df6",
+      "file": "genone.png",
+      "placeholder": false
+    },
+    {
+      "name": "Spirit Academy",
+      "rank": 94,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/txUq00aBKY7O4fLVJegmi_.png?ixlib=java-2.1.0&w=100&s=8692615890f549a9119c8614ea6af5f9",
+      "file": "spirit_academy.png",
+      "placeholder": false
+    },
+    {
+      "name": "BET-M",
+      "rank": 95,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/V7kOhjpI4AiRCPnthLVvL6.png?ixlib=java-2.1.0&w=100&s=37c73bf089b5f4599145b0f66a18ad9b",
+      "file": "bet_m.png",
+      "placeholder": false
+    },
+    {
+      "name": "BAKS",
+      "rank": 96,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/addrkF7msTiD-HdGMcCXbZ.png?ixlib=java-2.1.0&w=100&s=ca75eca719218c3b92097d5bba6e426f",
+      "file": "baks.png",
+      "placeholder": false
+    },
+    {
+      "name": "ASTRAL",
+      "rank": 97,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/cep1rsT1ueXzsovbqAxK76.png?ixlib=java-2.1.0&w=100&s=0ec5611a6169127f573350184a2303e8",
+      "file": "astral.png",
+      "placeholder": false
+    },
+    {
+      "name": "Sashi",
+      "rank": 98,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/xa5M31PECYUvHs6wlM9nzM.png?ixlib=java-2.1.0&w=100&s=914188438203c6fa2ac408fadbf7bacf",
+      "file": "sashi.png",
+      "placeholder": false
+    },
+    {
+      "name": "ex-RUSTEC",
+      "rank": 99,
+      "sourceURL": "https://www.hltv.org/dynamic-svg/teamplaceholder?letter=e",
+      "file": "ex_rustec.svg",
+      "placeholder": true
+    },
+    {
+      "name": "9INE",
+      "rank": 100,
+      "sourceURL": "https://img-cdn.hltv.org/teamlogo/BGC4LXlC8s4W0xWyelk2BI.png?ixlib=java-2.1.0&w=100&s=d7c215c893f546cf02505252ba744698",
+      "file": "9ine.png",
+      "placeholder": false
+    }
+  ]
+}

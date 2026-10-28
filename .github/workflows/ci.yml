@@ -27,8 +27,18 @@ jobs:
       - name: Build application
         run: ./scripts/build-app.sh
 
-      - name: Verify bundle
+      - name: Build development application
+        run: ./scripts/build-app.sh debug
+
+      - name: Verify bundles and icon resources
         run: |
-          test -x "build/CS Match Desk.app/Contents/MacOS/CSMatchBar"
-          plutil -lint "build/CS Match Desk.app/Contents/Info.plist"
-          codesign --verify --deep --strict "build/CS Match Desk.app"
+          for app in "build/CS Match Desk.app" "build/debug/CS Match Desk.app"; do
+            test -x "$app/Contents/MacOS/CSMatchBar"
+            plutil -lint "$app/Contents/Info.plist"
+            codesign --verify --deep --strict "$app"
+            for icon in AppIcon.icns MenuBarIcon@2x.png HeaderIcon@2x.jpg; do
+              cmp "Resources/$icon" "$app/Contents/Resources/$icon"
+            done
+            diff -qr Resources/OriginalTeamLogos "$app/Contents/Resources/TeamLogos"
+            diff -qr Resources/DarkTeamLogos "$app/Contents/Resources/TeamLogosDark"
+          done

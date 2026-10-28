@@ -28,6 +28,7 @@
 - 展示重要赛事的已结束比赛、最终比分和 HLTV 详情链接
 - 焦点与全部列表互斥，避免同一比赛重复出现
 - 为黑色队标提供深色模式反色资源
+- 预装 VRS 全球排名前 100 名队伍的图标（2026-10-28 快照）
 - 每 5 分钟自动刷新，支持手动刷新与本地缓存
 - 点击比赛卡片可在默认浏览器打开对应 HLTV 页面
 
@@ -42,6 +43,14 @@
 
 ## 快速开始
 
+### 下载应用
+
+前往 [GitHub Releases](https://github.com/BillyLiu312/cs-match-desk/releases/latest) 下载 `macos-arm64.zip` 应用包，解压后将 `CS Match Desk.app` 拖入 `/Applications` 并打开。
+
+当前预编译包适用于 Apple Silicon Mac（M 系列芯片），需要 macOS 13+。应用使用 ad-hoc 签名，尚未经过 Apple 公证；首次打开可能需要在“系统设置 -> 隐私与安全性”中确认允许打开。Intel Mac 请按下方步骤从源码构建。
+
+### 从源码运行
+
 ```bash
 git clone https://github.com/BillyLiu312/cs-match-desk.git
 cd cs-match-desk
@@ -49,6 +58,8 @@ cd cs-match-desk
 ```
 
 菜单栏出现 CS Logo 后，点击即可打开面板。
+
+`run.sh` 会先构建包含完整图标资源的 Debug 应用到 `build/debug/CS Match Desk.app`，再在前台运行；按 `Ctrl+C` 退出。请使用该脚本启动开发版本，直接执行 `swift run` 不会打包应用所需的图标资源。
 
 ## 构建应用
 
@@ -107,7 +118,7 @@ scripts/                运行、测试、打包和资源生成脚本
 - HLTV 的 Cloudflare 安全验证可能导致临时刷新失败。
 - HLTV DOM 或赛事页面结构变化可能导致字段缺失。
 - 昨日赛果依赖最近的成功同步与缓存。
-- 预装队标来自构建时的 VRS 常见队伍快照，阵容和排名会随时间变化。
+- 预装队标来自 2026-10-28 的 VRS 全球前 100 名快照，阵容和排名会随时间变化；其中 Color、ex-Zero Tenacity 和 ex-RUSTEC 在 HLTV 上仅提供字母占位图。排名与原图来源见 [队标清单](docs/team-logos.json)。
 - 当前应用界面仅提供简体中文。
 
 ## 贡献
