@@ -3,6 +3,7 @@ import SwiftUI
 
 struct DashboardView: View {
     @EnvironmentObject private var store: MatchesStore
+    @EnvironmentObject private var douyuLive: DouyuLiveStore
 
     private static let headerImage: NSImage = {
         guard
@@ -29,6 +30,9 @@ struct DashboardView: View {
         .preferredColorScheme(.dark)
         .onAppear {
             store.resetToToday()
+        }
+        .task {
+            await douyuLive.refresh()
         }
     }
 
@@ -62,6 +66,7 @@ struct DashboardView: View {
 
             Button {
                 Task { await store.refresh() }
+                Task { await douyuLive.refresh(force: true) }
             } label: {
                 Image(systemName: "arrow.clockwise")
                     .rotationEffect(.degrees(store.isRefreshing ? 360 : 0))
@@ -166,11 +171,7 @@ struct DashboardView: View {
 
             Spacer()
 
-            Button(action: store.openHLTV) {
-                Image(systemName: "safari")
-            }
-            .buttonStyle(.plain)
-            .help("在浏览器打开 HLTV")
+            douyuRoomButton
 
             Button {
                 NSApplication.shared.terminate(nil)
@@ -182,6 +183,54 @@ struct DashboardView: View {
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 10)
+    }
+
+    private var douyuRoomButton: some View {
+        Button {
+            NSWorkspace.shared.open(DouyuRoomClient.roomURL)
+        } label: {
+            HStack(spacing: 5) {
+                Circle()
+                    .fill(douyuStatusColor)
+                    .frame(width: 6, height: 6)
+                Text("玩机器")
+                    .foregroundStyle(.primary)
+                Text(douyuLive.status.title)
+                    .foregroundStyle(douyuStatusColor)
+                Image(systemName: "arrow.up.right")
+                    .font(.system(size: 8, weight: .semibold))
+                    .foregroundStyle(.secondary)
+            }
+            .font(.system(size: 10, weight: .medium))
+            .fixedSize()
+            .padding(.horizontal, 8)
+            .padding(.vertical, 5)
+            .background(douyuStatusColor.opacity(0.1), in: Capsule())
+            .contentShape(Capsule())
+        }
+        .buttonStyle(.plain)
+        .help(douyuRoomHelp)
+        .accessibilityLabel("玩机器，\(douyuLive.status.title)，打开斗鱼直播间 6657")
+    }
+
+    private var douyuStatusColor: Color {
+        switch douyuLive.status {
+        case .live: return .red
+        case .unavailable: return .orange
+        case .checking, .offline: return .secondary
+        }
+    }
+
+    private var douyuRoomHelp: String {
+        let detail: String
+        if let checked = douyuLive.lastChecked {
+            detail = "\(douyuLive.status.title) · 检查于 \(checked.formatted(date: .omitted, time: .shortened))"
+        } else if douyuLive.status == .unavailable {
+            detail = "暂时无法获取直播状态"
+        } else {
+            detail = "正在查询直播状态"
+        }
+        return "玩机器 · \(detail)\n点击打开斗鱼直播间 6657"
     }
 }
 

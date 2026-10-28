@@ -32,13 +32,13 @@ jobs:
 
       - name: Verify bundles and icon resources
         run: |
-          for app in "build/CS Match Desk.app" "build/debug/CS Match Desk.app"; do
-            test -x "$app/Contents/MacOS/CSMatchBar"
-            plutil -lint "$app/Contents/Info.plist"
-            codesign --verify --deep --strict "$app"
-            for icon in AppIcon.icns MenuBarIcon@2x.png HeaderIcon@2x.jpg; do
-              cmp "Resources/$icon" "$app/Contents/Resources/$icon"
-            done
-            diff -qr Resources/OriginalTeamLogos "$app/Contents/Resources/TeamLogos"
-            diff -qr Resources/DarkTeamLogos "$app/Contents/Resources/TeamLogosDark"
+          app="build/CS Match Desk.app"
+          test -x "$app/Contents/MacOS/CSMatchBar"
+          plutil -lint "$app/Contents/Info.plist"
+          codesign --verify --deep --strict "$app"
+          for icon in AppIcon.icns MenuBarIcon@2x.png HeaderIcon@2x.jpg; do
+            cmp "Resources/$icon" "$app/Contents/Resources/$icon"
           done
+          diff -qr Resources/OriginalTeamLogos "$app/Contents/Resources/TeamLogos"
+          diff -qr Resources/DarkTeamLogos "$app/Contents/Resources/TeamLogosDark"
+          test "$(find build -type d -name '*.app' | wc -l | tr -d ' ')" -eq 1

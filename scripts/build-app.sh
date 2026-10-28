@@ -9,9 +9,8 @@ if [[ "$CONFIGURATION" != "debug" && "$CONFIGURATION" != "release" ]]; then
 fi
 
 BUILD_DIR="$ROOT_DIR/build"
-if [[ "$CONFIGURATION" == "debug" ]]; then
-    BUILD_DIR="$BUILD_DIR/debug"
-fi
+# Keep one discoverable application bundle. The Swift build configuration still
+# controls the binary, but debug and release bundles share this canonical path.
 APP_DIR="$BUILD_DIR/CS Match Desk.app"
 CONTENTS_DIR="$APP_DIR/Contents"
 CACHE_DIR="$ROOT_DIR/.cache"

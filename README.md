@@ -31,6 +31,8 @@
 - 预装 VRS 全球排名前 100 名队伍的图标（2026-10-28 快照）
 - 每 5 分钟自动刷新，支持手动刷新与本地缓存
 - 点击比赛卡片可在默认浏览器打开对应 HLTV 页面
+- 右下角显示玩机器直播状态，点击可直达[斗鱼直播间 6657](https://www.douyu.com/6657)
+- 直播状态每分钟自动检查，支持手动刷新；查询失败时显示“状态未知”
 
 ## 系统要求
 
@@ -59,7 +61,7 @@ cd cs-match-desk
 
 菜单栏出现 CS Logo 后，点击即可打开面板。
 
-`run.sh` 会先构建包含完整图标资源的 Debug 应用到 `build/debug/CS Match Desk.app`，再在前台运行；按 `Ctrl+C` 退出。请使用该脚本启动开发版本，直接执行 `swift run` 不会打包应用所需的图标资源。
+`run.sh` 会先构建包含完整图标资源的 Debug 应用到统一的 `build/CS Match Desk.app`，再在前台运行；按 `Ctrl+C` 退出。Debug 和 Release 会复用同一个应用包路径，不会在项目目录产生第二个可被 Spotlight 搜索到的应用图标。直接执行 `swift run` 不会打包应用所需的图标资源。
 
 ## 构建应用
 
@@ -68,7 +70,7 @@ cd cs-match-desk
 open "build/CS Match Desk.app"
 ```
 
-生成产物位于 `build/CS Match Desk.app`。本地构建使用 ad-hoc 签名，不包含 Apple Developer ID 公证。若长期使用，可以将应用拖入 `/Applications`，并在“系统设置 -> 通用 -> 登录项”中添加开机启动。
+生成产物始终位于 `build/CS Match Desk.app`。本地构建使用 ad-hoc 签名，不包含 Apple Developer ID 公证。若长期使用，可以将应用拖入 `/Applications`，并在“系统设置 -> 通用 -> 登录项”中添加开机启动。旧的发布归档只适合上传或备份，不应放在项目目录中；否则 Spotlight 仍会把归档中的 `.app` 当作独立应用显示。
 
 ## 测试
 
@@ -76,7 +78,7 @@ open "build/CS Match Desk.app"
 ./scripts/test.sh
 ```
 
-测试脚本会编译核心比赛模型并检查日期过滤、重要赛事识别、排序、标签去重、BO 胜图展示及战队简称。
+测试脚本会检查日期过滤、重要赛事识别、排序、标签去重、BO 胜图展示及战队简称，以及斗鱼直播状态解析、错误处理、请求节流与刷新恢复。
 
 ## 工作原理
 
@@ -91,6 +93,8 @@ HLTV 页面 -> 隐藏 WKWebView -> DOM 提取 -> Match 模型 -> 本地缓存 ->
 - 页面结构发生变化后，`HLTVScraper.swift` 中的选择器可能需要更新。
 - 为控制请求频率，默认刷新间隔为 5 分钟。
 
+玩机器的直播状态通过斗鱼公开的 RoomApi 查询，独立于比赛同步，每 60 秒检查一次。公开短号 `6657` 对应实际房间号 `6979222`，查询时校验实际房间号，点击入口仍打开 `https://www.douyu.com/6657`。红点表示“直播中”，灰点表示“未开播”或首次“查询中”，橙点表示“状态未知”；任何状态下都可点击进入直播间。面板顶部的刷新按钮也会更新直播状态。
+
 ## 项目结构
 
 ```text
@@ -100,6 +104,8 @@ Sources/CSMatchBar/
   HLTVScraper.swift     WebKit 页面加载与 DOM 提取
   Match.swift           比赛模型和筛选规则
   MatchesStore.swift    刷新、缓存和视图状态
+  DouyuRoomStatus.swift  斗鱼房间状态模型与公开接口查询
+  DouyuLiveStore.swift   直播状态轮询与错误处理
   TeamLogoCache.swift   队标资源与深色模式切换
 Resources/              应用图标、菜单栏图标和队标资源
 Tests/                  零依赖核心逻辑检查
@@ -112,12 +118,14 @@ scripts/                运行、测试、打包和资源生成脚本
 - 不包含遥测、分析 SDK 或广告 SDK。
 - 比赛缓存和队标缓存仅保存在本机。
 - 点击比赛时会使用系统默认浏览器打开 HLTV。
+- 直播状态检查会访问斗鱼公开接口；点击玩机器入口时会在默认浏览器打开斗鱼。
 
 ## 已知限制
 
 - HLTV 的 Cloudflare 安全验证可能导致临时刷新失败。
 - HLTV DOM 或赛事页面结构变化可能导致字段缺失。
 - 昨日赛果依赖最近的成功同步与缓存。
+- 斗鱼直播状态最多有约一分钟的轮询延迟；公开接口变化或网络故障时会显示“状态未知”。
 - 预装队标来自 2026-10-28 的 VRS 全球前 100 名快照，阵容和排名会随时间变化；其中 Color、ex-Zero Tenacity 和 ex-RUSTEC 在 HLTV 上仅提供字母占位图。排名与原图来源见 [队标清单](docs/team-logos.json)。
 - 当前应用界面仅提供简体中文。
 

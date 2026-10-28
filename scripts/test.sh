@@ -17,3 +17,12 @@ swiftc \
     "$ROOT_DIR/Tests/MatchChecks.swift" \
     -o "$CACHE_DIR/MatchChecks"
 "$CACHE_DIR/MatchChecks"
+
+swiftc \
+    -sdk "$SDK_PATH" \
+    -module-cache-path "$CACHE_DIR/clang" \
+    "$ROOT_DIR/Sources/CSMatchBar/DouyuRoomStatus.swift" \
+    "$ROOT_DIR/Sources/CSMatchBar/DouyuLiveStore.swift" \
+    "$ROOT_DIR/Tests/DouyuLiveChecks.swift" \
+    -o "$CACHE_DIR/DouyuLiveChecks"
+"$CACHE_DIR/DouyuLiveChecks"

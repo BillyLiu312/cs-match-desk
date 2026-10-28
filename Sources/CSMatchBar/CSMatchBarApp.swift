@@ -4,6 +4,7 @@ import SwiftUI
 @main
 struct CSMatchBarApp: App {
     @StateObject private var store: MatchesStore
+    @StateObject private var douyuLive: DouyuLiveStore
 
     private static let menuBarImage: NSImage = {
         if
@@ -23,7 +24,9 @@ struct CSMatchBarApp: App {
 
     init() {
         let store = MatchesStore()
+        let douyuLive = DouyuLiveStore()
         _store = StateObject(wrappedValue: store)
+        _douyuLive = StateObject(wrappedValue: douyuLive)
         Task { @MainActor in
             if ProcessInfo.processInfo.environment["CSMATCH_EXPORT_VRS"] == "1" {
                 do {
@@ -35,6 +38,7 @@ struct CSMatchBarApp: App {
                 NSApplication.shared.terminate(nil)
             } else {
                 store.start()
+                douyuLive.start()
             }
         }
     }
@@ -43,6 +47,7 @@ struct CSMatchBarApp: App {
         MenuBarExtra {
             DashboardView()
                 .environmentObject(store)
+                .environmentObject(douyuLive)
         } label: {
             Image(nsImage: Self.menuBarImage)
                 .accessibilityLabel("CS Match Desk")
