@@ -4,6 +4,7 @@ import SwiftUI
 struct DashboardView: View {
     @EnvironmentObject private var store: MatchesStore
     @EnvironmentObject private var douyuLive: DouyuLiveStore
+    @EnvironmentObject private var followedMatches: FollowedMatchesStore
 
     private static let headerImage: NSImage = {
         guard
@@ -21,6 +22,15 @@ struct DashboardView: View {
             header
             Divider().opacity(0.45)
             filterBar
+            if let message = followedMatches.notificationMessage {
+                Text(message)
+                    .font(.caption2)
+                    .foregroundStyle(.orange)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 16)
+                    .padding(.bottom, 8)
+            }
             content
             Divider().opacity(0.45)
             footer
@@ -30,6 +40,7 @@ struct DashboardView: View {
         .preferredColorScheme(.dark)
         .onAppear {
             store.resetToToday()
+            followedMatches.synchronize()
         }
         .task {
             await douyuLive.refresh()
@@ -144,9 +155,12 @@ struct DashboardView: View {
                             .padding(.horizontal, 4)
 
                             ForEach(group.matches) { match in
-                                MatchCard(match: match) {
-                                    store.open(match)
-                                }
+                                MatchCard(
+                                    match: match,
+                                    isFollowed: followedMatches.isFollowing(match),
+                                    action: { store.open(match) },
+                                    followAction: { followedMatches.toggle(match) }
+                                )
                             }
                         }
                     }
@@ -236,11 +250,15 @@ struct DashboardView: View {
 
 private struct MatchCard: View {
     let match: Match
+    let isFollowed: Bool
     let action: () -> Void
+    let followAction: () -> Void
+
+    private var isCompleted: Bool { match.status == .completed }
 
     var body: some View {
-        Button(action: action) {
-            VStack(spacing: 9) {
+        VStack(spacing: 9) {
+            if !isCompleted {
                 HStack(spacing: 8) {
                     if let stage = match.stage, !stage.isEmpty {
                         Text(stage)
@@ -249,39 +267,55 @@ private struct MatchCard: View {
                             .lineLimit(1)
                     }
                     Spacer(minLength: 4)
+                    Button(action: followAction) {
+                        Image(systemName: isFollowed ? "bell.fill" : "bell.badge")
+                            .font(.system(size: 10, weight: .semibold))
+                            .foregroundStyle(isFollowed ? Color.yellow : Color.secondary)
+                            .padding(.horizontal, 7)
+                            .padding(.vertical, 5)
+                            .background(Color.white.opacity(0.06), in: Capsule())
+                            .contentShape(Capsule())
+                    }
+                    .buttonStyle(.plain)
+                    .help(isFollowed ? "取消关注及开赛提醒" : "关注比赛并在开赛时提醒")
+                    .accessibilityLabel("\(isFollowed ? "取消关注" : "关注") \(match.team1) 对阵 \(match.team2)")
                     stars
                     status
                 }
-
-                HStack(spacing: 6) {
-                    team(name: match.team1, logo: match.team1LogoURL)
-                    scoreboard
-                    team(name: match.team2, logo: match.team2LogoURL, trailing: true)
-                }
-
-                HStack {
-                    if match.status == .completed {
-                        Text("最终比分")
-                    }
-                    Spacer()
-                    if !match.bestOf.isEmpty {
-                        Text(match.bestOf.uppercased())
-                    }
-                    Image(systemName: "arrow.up.right")
-                }
-                .font(.caption2)
-                .foregroundStyle(.tertiary)
             }
-            .padding(12)
-            .background(Color(nsColor: .controlBackgroundColor))
-            .overlay {
-                RoundedRectangle(cornerRadius: 6)
-                    .stroke(match.status == .live ? Color.red.opacity(0.42) : Color.white.opacity(0.06))
+
+            Button(action: action) {
+                VStack(spacing: 9) {
+                    HStack(spacing: 6) {
+                        team(name: match.team1, logo: match.team1LogoURL)
+                        scoreboard
+                        team(name: match.team2, logo: match.team2LogoURL, trailing: true)
+                    }
+
+                    if !isCompleted {
+                        HStack {
+                            Spacer()
+                            if !match.bestOf.isEmpty {
+                                Text(match.bestOf.uppercased())
+                            }
+                            Image(systemName: "arrow.up.right")
+                        }
+                        .font(.caption2)
+                        .foregroundStyle(.tertiary)
+                    }
+                }
+                .contentShape(Rectangle())
             }
-            .clipShape(RoundedRectangle(cornerRadius: 6))
-            .contentShape(Rectangle())
+            .buttonStyle(MatchButtonStyle())
         }
-        .buttonStyle(MatchButtonStyle())
+        .padding(12)
+        .background(Color(nsColor: .controlBackgroundColor))
+        .overlay {
+            RoundedRectangle(cornerRadius: 6)
+                .stroke(match.status == .live ? Color.red.opacity(0.42) : Color.white.opacity(0.06), lineWidth: 1)
+                .allowsHitTesting(false)
+        }
+        .clipShape(RoundedRectangle(cornerRadius: 6))
     }
 
     private var status: some View {
@@ -322,7 +356,7 @@ private struct MatchCard: View {
                 scoreText(match.displayedScore2, alignment: .leading)
             }
 
-            if let requiredWins = match.mapsNeededToWin {
+            if !isCompleted, let requiredWins = match.mapsNeededToWin {
                 HStack(spacing: 5) {
                     seriesIndicator(wins: match.seriesWins1, requiredWins: requiredWins, trailing: true)
                     Color.clear.frame(width: 18, height: 4)
@@ -361,6 +395,7 @@ private struct MatchCard: View {
     private func nameText(_ name: String) -> some View {
         Text(Match.displayTeamName(name))
             .font(.system(size: 13, weight: .semibold))
+            .foregroundStyle(.primary)
             .lineLimit(1)
     }
 

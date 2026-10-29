@@ -5,6 +5,7 @@ import SwiftUI
 struct CSMatchBarApp: App {
     @StateObject private var store: MatchesStore
     @StateObject private var douyuLive: DouyuLiveStore
+    @StateObject private var followedMatches: FollowedMatchesStore
 
     private static let menuBarImage: NSImage = {
         if
@@ -23,9 +24,11 @@ struct CSMatchBarApp: App {
     }()
 
     init() {
-        let store = MatchesStore()
+        let followedMatches = FollowedMatchesStore()
+        let store = MatchesStore(followedMatches: followedMatches)
         let douyuLive = DouyuLiveStore()
         _store = StateObject(wrappedValue: store)
+        _followedMatches = StateObject(wrappedValue: followedMatches)
         _douyuLive = StateObject(wrappedValue: douyuLive)
         Task { @MainActor in
             if ProcessInfo.processInfo.environment["CSMATCH_EXPORT_VRS"] == "1" {
@@ -48,6 +51,7 @@ struct CSMatchBarApp: App {
             DashboardView()
                 .environmentObject(store)
                 .environmentObject(douyuLive)
+                .environmentObject(followedMatches)
         } label: {
             Image(nsImage: Self.menuBarImage)
                 .accessibilityLabel("CS Match Desk")

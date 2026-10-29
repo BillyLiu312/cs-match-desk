@@ -36,13 +36,15 @@ final class MatchesStore: ObservableObject {
     @Published var selectedDay: DaySelection = .today
 
     private let scraper = HLTVScraper()
+    private let followedMatches: FollowedMatchesStore
     private var refreshTask: Task<Void, Never>?
     private var hasStarted = false
     private let refreshInterval: Duration = .seconds(300)
     private let cacheKey = "cachedMatches.v1"
     private let cacheDateKey = "cachedMatchesDate.v1"
 
-    init() {
+    init(followedMatches: FollowedMatchesStore) {
+        self.followedMatches = followedMatches
         restoreCache()
     }
 
@@ -96,6 +98,7 @@ final class MatchesStore: ObservableObject {
     func start() {
         guard !hasStarted else { return }
         hasStarted = true
+        followedMatches.update(matches: matches)
         refreshTask = Task { [weak self] in
             guard let self else { return }
             await self.refresh()
@@ -127,8 +130,10 @@ final class MatchesStore: ObservableObject {
             matches = Array(merged.values).chronological()
             lastUpdated = Date()
             saveCache()
+            followedMatches.update(matches: matches)
         } catch {
             errorMessage = error.localizedDescription
+            followedMatches.synchronize()
         }
     }
 
